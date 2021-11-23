@@ -1,0 +1,28 @@
+{
+  "root": "apps/f00b455-e2e",
+  "sourceRoot": "apps/f00b455-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/f00b455-e2e/cypress.json",
+        "devServerTarget": "f00b455:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "f00b455:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/f00b455-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["f00b455"]
+}

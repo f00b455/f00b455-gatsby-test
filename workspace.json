@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "f00b455": "apps/f00b455",
+    "f00b455-e2e": "apps/f00b455-e2e"
+  }
+}

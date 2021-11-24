@@ -4,8 +4,16 @@ module.exports = {
     description: `This is a gatsby application created by Nx.`,
   },
   plugins: [
-    'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `em94b2v9hnzn`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: "bRQYJWw3fas_VLJO1tSNH0oN5NVg_NDwLR0qtGh5PCU",
 
+      },
+    },
+    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-svgr',
       options: {
@@ -30,6 +38,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

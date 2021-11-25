@@ -4,6 +4,7 @@ module.exports = {
     description: `This is a gatsby application created by Nx.`,
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
